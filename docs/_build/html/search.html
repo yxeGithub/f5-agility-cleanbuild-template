@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <head>
   
-  <!--STAGING:-->
-  <script src="https://assets.adobedtm.com/50164577268f481934e5d57dbfb78f929164cd0d/satelliteLib-ea775cfabef5fca8b04e9392f20c986c0724a7c3-staging.js"></script>
-  <!--Production:-->
-  <script src="https://assets.adobedtm.com/50164577268f481934e5d57dbfb78f929164cd0d/satelliteLib-ea775cfabef5fca8b04e9392f20c986c0724a7c3.js"></script>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-PPZPQ6');</script>
+  <!-- End Google Tag Manager -->
     <title>Search</title>
   
 
@@ -12,21 +11,20 @@
   <!-- Twitter Bootstrap viewport setting -->
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <!-- F5 metadata -->
-  <meta name="kb_doc_type" content="Manual"/>
-  <meta name="kb_doc_type" content="User Guide"/>
   <meta name="title" content="Search"/>
   <meta name="product" content="Getting Started with F5 BIG-IP"/>
   <meta name="version" content=""/>
   <meta name="updated_date"  content="None"/>
   <meta name="archived" content="Archived documents excluded"/>
+  <meta name="doc_type" content="Manual"/>
+  <meta name="lifecycle" content="release"/>
+  <meta name="Getting Started with F5 BIG-IP" content=""/>
+
 
   
-  
+
   
   <link href="https://cdn.f5.com/favicon.ico" rel="icon">
- 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <script type="text"> jQuery.noConflict(true)</script>
 
 </head>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
@@ -39,19 +37,21 @@
     <title>Search &#8212; Getting Started with F5 BIG-IP  documentation</title>
     <link rel="stylesheet" href="_static/css/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="_static/css/f5_agility_theme.css" type="text/css" />
-    <link rel="stylesheet" href="_static/css/bootstrap.min.css" type="text/css" />
-    <link rel="stylesheet" href="_static/css/f5.css" type="text/css" />
-    <link rel="stylesheet" href="_static/css/f5-theme.css" type="text/css" />
-    <link rel="stylesheet" href="_static/css/CoveoFullSearch.css" type="text/css" />
-    <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
-    <link rel="stylesheet" href="https://use.fontawesome.com/21fb8a09c3.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/f5_agility_theme.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/f5.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/f5-theme.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/CoveoFullSearch.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/custom.css" />
+    <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/21fb8a09c3.css" />
+    
     <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <script type="text/javascript" src="_static/searchtools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.js"></script>
+    <script type="text/javascript" src="_static/searchtools.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="#" />
   <script type="text/javascript">
@@ -66,6 +66,9 @@
 
     <div id="sidebar" class="section-nav">
       
+      <!--  version selector ------------------>
+      <div id="version_selector_wrapper">
+      </div>
       <nav class="nav-sidebartoc">
 
         
@@ -116,12 +119,16 @@
 
 
     
+     
+         <div class="sidebar" id="version-warning" style="display: none;">
+           <p class="first sidebar-title">
+           <span class="icon fa fa-info-circle fa-lg"></span> Version notice:</p>
+           <p class="last" id="currentVersion"></p>
+          </div>
 
 
      <div role="main">
         
-
-<div class="search-wrapper">
   <h1 id="search-documentation">Search</h1>
   <div id="fallback" class="admonition warning">
   <script type="text/javascript">$('#fallback').hide();</script>
@@ -131,19 +138,20 @@
   </p>
   </div>
   <p>
-    Enter your search words into the box below and click "Search".
-    
+    From here you can search these documents. Enter your search
+    words into the box below and click "search". Note that the search
+    function will automatically search for all of the words. Pages
+    containing fewer words won't appear in the result list.
   </p>
   <form action="" method="get">
     <input type="text" name="q" value="" />
-    <button type="submit" class="btn btn-info navbar-btn" value="search">Search <i class="fa fa-search"></i> </button>
+    <input type="submit" value="search" />
     <span id="search-progress" style="padding-left: 10px"></span>
   </form>
   
   <div id="search-results">
   
   </div>
-</div>
 
      </div>
     
@@ -159,6 +167,7 @@
   ================================================== -->
   <!-- Placed at the end of the document so the pages load faster -->
 
+  <script src="_static/js/index.js"></script>
   <script src="_static/js/jquery.appear.js"></script>
   <script src="_static/js/printThis.js"></script>
   <script src="_static/js/bootstrap.min.js"></script>
