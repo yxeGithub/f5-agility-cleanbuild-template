@@ -4,16 +4,15 @@ F5 Agility Lab Template
 Introduction
 ------------
 
-This repo contains a template that should be used when creating lab
-documentation for F5's Agility Labs.
+This repo contains a template that should be used when importing your lab documentation
+for F5's Agility Labs.  This repo has been cleaned out of all Lab / Class specifics to 
+make it easier to import just class info into and now worry about git conflicts.
 
 Setup
 -----
 
-#. Download or ``git clone`` the f5-agility-lab-template
+#. Download or ``git clone`` this https://github.com/yxeGithub/f5-agility-cleanbuild-template.git
 #. Download and install Docker CE (https://docs.docker.com/engine/installation/)
-#. Build the sample docs ``./containthedocs-build.sh``. The first time you build
-   a container (~1G in size) will be downloaded from Docker Hub.
 #. Open the ``docs/_build/html/index.html`` file on you system in a web browser
 
 Configuration & Use
@@ -21,7 +20,7 @@ Configuration & Use
 
 To use this template:
 
-#. Copy contents of this repo to a new directory ``cp -Rf . /path/to/your/docs``
+#. Copy contents of your repo's class files, etc. to the docs folder
 #. ``cd /path/to/your/docs``
 #. Edit ``docs/conf.py``
 #. Modify the following lines:
@@ -33,6 +32,9 @@ To use this template:
 #. Open the ``docs/_build/html/index.html`` file on you system in a web browser
 #. Edit the ``*.rst`` files as needed for your class
 #. Rebuild docs as needed using ``./containthedocs-build.sh``
+#. If needed rebuild the docs with the ``./containthedocs-cleanbuild.sh``.  
+This will rebuild the static files and make it so you dont have any lingering weirdness.  
+I find you have to do this sometimes if you have made massive changes to the repo.
 
 Converting from Microsoft Word
 ------------------------------
